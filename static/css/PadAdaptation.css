@@ -1,0 +1,85 @@
+@media (max-width: 1279px) {
+    nav {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .navmenu {
+        gap: 10px;
+    }
+
+    .catalogright p {
+        padding: 10px 0;
+    }
+
+    .catalog {
+        text-align: center;
+    }
+
+    .catalogright p {
+        background: none;
+    }
+
+    .stages {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .stageleft {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .psecureph {
+        display: flex;
+        justify-content: center;
+        font-size: 24px;
+        background-color: #1D1D1D;
+        padding: 5px 0;
+        margin-top: 100px;
+    }
+
+    /* hover */
+    .cv2:hover {
+        background-color: #D4D4D4;
+        animation: none;
+    }
+
+    .cv1:hover {
+        background-color: #AFFF50;
+        animation: none;
+    }
+
+    .gisbtn::before {
+        display: none;
+    }
+
+    .tocatalog a:hover {
+        background-color: #AFFF50;
+    }
+
+    /* nav hover */
+    .button1::before {
+        display: none;
+    }
+
+    .button1:hover {
+        animation: none;
+    }
+
+    .button2::after,
+    .button3::after {
+        display: none;
+    }
+
+    .button2:hover::after,
+    .button3:hover::after {
+        left: 0;
+        animation: none;
+    }
+
+}
