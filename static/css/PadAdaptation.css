@@ -1,11 +1,14 @@
 @media (max-width: 1279px) {
-    nav {
-        justify-content: center;
-        gap: 10px;
+    nav:not(.phonemenu) {
+        display: none;
     }
 
-    .navmenu {
-        gap: 10px;
+    .phonemenu {
+        display: flex;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        border: 1px outset #ffffff56;
+        border-radius: 40px;
     }
 
     .catalogright p {
@@ -22,7 +25,6 @@
 
     .stages {
         justify-content: center;
-        flex-wrap: wrap;
     }
 
     .stageleft {
@@ -36,11 +38,6 @@
 
     .psecureph {
         display: flex;
-        justify-content: center;
-        font-size: 24px;
-        background-color: #1D1D1D;
-        padding: 5px 0;
-        margin-top: 100px;
     }
 
     /* hover */
@@ -61,25 +58,4 @@
     .tocatalog a:hover {
         background-color: #AFFF50;
     }
-
-    /* nav hover */
-    .button1::before {
-        display: none;
-    }
-
-    .button1:hover {
-        animation: none;
-    }
-
-    .button2::after,
-    .button3::after {
-        display: none;
-    }
-
-    .button2:hover::after,
-    .button3:hover::after {
-        left: 0;
-        animation: none;
-    }
-
 }

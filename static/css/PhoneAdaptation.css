@@ -5,15 +5,8 @@
         display: none;
     }
 
-    nav {
+    nav:not(.phonemenu) {
         display: none;
-    }
-
-    .navmenu {
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-        border: 1px outset #ffffff56;
-        border-radius: 40px;
     }
 
     .phonemenu {
@@ -26,13 +19,10 @@
     }
 
     .tocatalog p {
-        font-size: 12px;
-        height: 25px;
         padding: 5px 5px;
     }
 
     .tocatalog a {
-        font-size: 10px;
         height: 25px;
         white-space: nowrap;
         padding: 5px 5px;
@@ -78,59 +68,24 @@
         padding: 0px 15px;
     }
 
+
+
     /* contact */
 
-    .contactprew p {
-        font-size: clamp(32px, 5vw, 48px);
-    }
-
-    .contactprew span {
-        font-size: clamp(24px, 5vw, 36px);
-    }
-
     .stage {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-
-        background-color: #1D1D1D;
-        border-radius: 40px;
-        padding: 25px 25px;
         width: 250px;
     }
 
     /* футер */
     .worktime {
-        color: #ffffff;
-        font-size: clamp(20px, 5vw, 24px);
-        font-family: sans-serif;
-        text-align: center;
-
         border: 1px solid #ffffff;
         border-radius: 25px;
-    }
-
-    .contactsfooter {
-        color: #ffffff;
-        font-size: clamp(24px, 5vw, 36px);
-        font-family: sans-serif;
-        text-align: center;
-        line-height: 0.6;
     }
 
     .contactsfooter span {
         font-size: clamp(16px, 2vw, 24px);
     }
-
-    .psecureph {
-        font-size: 16px;
-    }
-
     .stageleft {
-        background-color: #1D1D1D;
         padding: 15px 25px;
-        border-radius: 40px;
-        width: 250px;
-        margin-top: 0;
     }
 }
