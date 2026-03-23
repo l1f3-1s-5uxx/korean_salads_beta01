@@ -1,16 +1,13 @@
-@media (max-width: 1279px) {
+@media (max-width: 967px) {
     nav:not(.phonemenu) {
         display: none;
     }
-
     .phonemenu {
         display: flex;
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-        border: 1px outset #ffffff56;
-        border-radius: 40px;
     }
+}
 
+@media (max-width: 1279px) {
     .catalogright p {
         padding: 10px 0;
     }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no" /> <!--чтобы номер в сафари не светился-->
+    <meta name="format-detection" content="telephone=no" />
     <meta name="description"
         content="Корейские салаты, г. Бишкек, ул Садыгалиева 9Б/20. +996 998-99-76-35     Вкусно, свежо и с любовью. Заказы на праздники, корпоративы и семейные события.">
     <title>Корейские салаты, г. Бишкек</title>
@@ -17,25 +17,35 @@
 </head>
 
 <body>
-    <div class="wrapper"> <!--основной контейнер 1280px-->
+    <div class="wrapper">
         <video autoplay muted loop playsinline class="video-bg">
             <source src="static/background/back.mp4" type="video/mp4">
         </video>
 
         <nav>
-            <a class="logo-btn" href="index.html"><img src="static/img/logo.png" alt="logo.png"></a>
-            <div class="navmenu">
-                <a href="#market" class="button1">Каталог</a>
-                <a href="#contacts" class="button2">Контакты</a>
-                <a href="#feedback" class="button3">Отзывы</a>
+            <div class="nav-container">
+                <a class="logo-btn" href="index.html"><img src="static/img/logo.png" alt="logo.png"></a>
+                <ul>
+                    <li><a href="#market" class="button1">Каталог</a></li>
+                    <li><a href="#contacts" class="button2">Контакты</a></li>
+                    <li><a href="#feedback" class="button3">Отзывы</a></li>
+                </ul>
             </div>
         </nav>
 
         <nav class="phonemenu">
-            <img class="logophone" src="static/img/phonelogo.png" alt="logo.png">
-            <a href="index.html" class="phonebtns phbutton1"><img src="static/img/home.png" alt="home.png"></a>
-            <a href="#market" class="phonebtns phbutton2"><img src="static/img/market.png" alt="market.img"></a>
-            <a href="#contacts" class="phonebtns phbutton3"><img src="static/img/contacts.png" alt="contacts.png"></a>
+            <div class="phonemenu-container">
+
+                <ul>
+                    <li><a href="index.html"><img class="logophone" src="static/img/phonelogo.png" alt="Главная"></a></li>
+                    <li><a href="#market" class="phonebtns phbutton2"><img src="static/img/market.svg"
+                                alt="Каталог"></a></li>
+                    <li><a href="#contacts" class="phonebtns phbutton3"><img src="static/img/contacts.svg"
+                                alt="Контакты"></a></li>
+                    <li><a href="#feedback" class="phonebtns phbutton1"><img src="static/img/feedback.svg"
+                                alt="Отзывы"></a></li>
+                </ul>
+            </div>
         </nav>
 
         <main>
@@ -72,8 +82,8 @@
                         и доведён до идеального вкуса.</p>
                 </section>
                 <section class="priceback">
-                        <p>Цены на салаты не указаны, так как<br><span class="green">цена зависит от множества
-                                факторов.</span></p>
+                    <p>Цены на салаты не указаны, так как<br><span class="green">цена зависит от множества
+                            факторов.</span></p>
                 </section>
             </section>
 
@@ -238,5 +248,4 @@
         </footer>
     </div>
 </body>
-
 </html>
