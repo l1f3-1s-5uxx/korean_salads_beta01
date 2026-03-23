@@ -22,7 +22,9 @@ body {
 html {
   overflow-x: hidden;
 }
-
+a {
+  text-decoration: none;
+}
 .video-bg {
   position: fixed;
   top: 50%;
@@ -37,21 +39,22 @@ html {
 
 
 
-
 nav:not(.phonemenu) {
   position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1280px;
+  top: 0;
+  width: 100%;
+}
+.nav-container {
+  max-width: 1280px;
 
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin-top: 5px;
-  top: 0;
-
 
   border-radius: 100px;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(5px);
+  padding: 0 20px;
+
   z-index: 1000;
 }
 
@@ -59,10 +62,11 @@ nav:not(.phonemenu) {
   width: 196px;
 }
 
-.navmenu {
+.nav-container ul {
   display: flex;
   justify-content: end;
   gap: 30px;
+  list-style: none;
 }
 
 .button1 {
@@ -75,69 +79,83 @@ nav:not(.phonemenu) {
 
   font-family: inter;
   font-size: 20px;
-  text-align: center;
-  line-height: 0.8;
 
   width: 213px;
   height: 57px;
   border-radius: 50px;
 
-  text-decoration: none;
+  overflow: hidden;
+  position: relative;
   z-index: 1;
 }
 
 .button2,
 .button3 {
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
+
   background: #1D1D1D;
   color: #ffffff;
 
   font-family: inter;
   font-size: 20px;
-  text-align: center;
-  line-height: 0.8;
 
   width: 213px;
   height: 57px;
   border-radius: 50px;
 
-  text-decoration: none;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 
-.button3 span {
-  color: #AFFF50;
-}
 
 /* phone menu */
 .phonemenu {
-  display: none;
-
-  justify-content: center;
-  gap: 5px;
-  margin-top: 5px;
-
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
+  margin-top: 15px;
+  display: none;
+
+  width: 100%;
 }
+.phonemenu-container {
+  display: flex;
+  justify-content: center;
+  max-width: 400px;
+  margin: 0 auto;
+
+  backdrop-filter: blur(20px);
+  padding-top: 5px;
+  padding-left: 10px;  
+  padding-right: 10px;
+  border-radius: 40px;
+}
+.phonemenu ul {
+  list-style: none;
+  display: flex;
+  gap: 5px;
+
+  margin: 0;
+  padding: 0;
+}
+
 .logophone {
   height: 40px;
   padding: 5px 10px;
   background-color: #1D1D1D;
   border-radius: 40px;
 }
-
 .phonemenu img:not(.logophone) {
   width: 30px;
   background-color: #1D1D1D;
   border-radius: 100%;
   padding: 10px 10px;
 }
+
+
+
 
 /* первый слайд */
 
