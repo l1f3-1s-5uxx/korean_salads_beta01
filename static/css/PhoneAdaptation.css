@@ -14,6 +14,10 @@
     }
 
     /* textmain */
+    .familypak {
+        margin-top: 250px;
+    }
+
     .tocatalog {
         gap: 5px;
     }
@@ -34,7 +38,8 @@
 
     .prew {
         flex-direction: column;
-        align-items: start;
+        align-items: center;
+      
     }
 
     .catalogright p {
@@ -69,23 +74,11 @@
     }
 
 
-
-    /* contact */
-
-    .stage {
-        width: 250px;
+    /* contacts buttons */
+    .contact-button {
+        display: none;
     }
-
-    /* футер */
-    .worktime {
-        border: 1px solid #ffffff;
-        border-radius: 25px;
-    }
-
-    .contactsfooter span {
-        font-size: clamp(16px, 2vw, 24px);
-    }
-    .stageleft {
-        padding: 15px 25px;
+    .contact-buttons-phone {
+        display: flex;
     }
 }

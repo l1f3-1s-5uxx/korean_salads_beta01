@@ -1,5 +1,5 @@
 @font-face {
-  font-family: inter;
+  font-family: manrope;
   src: url(../fonts/Manrope-Bold.ttf);
 }
 
@@ -17,14 +17,22 @@ body {
   margin: 0 auto;
   background-color: #1D1D1D;
   max-width: 1280px;
+
+  color: #ffffff;
+  font-family: manrope;
+
+  overflow-x: hidden;
 }
 
 html {
   overflow-x: hidden;
 }
+
 a {
   text-decoration: none;
+  color: #ffffff;
 }
+
 .video-bg {
   position: fixed;
   top: 50%;
@@ -37,13 +45,20 @@ a {
   opacity: 0.8;
 }
 
+.green {
+  color: #AFFF50;
+}
+
+
 
 
 nav:not(.phonemenu) {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1000px;
 }
+
 .nav-container {
   max-width: 1280px;
 
@@ -77,7 +92,6 @@ nav:not(.phonemenu) {
   background: #AFFF50;
   color: #1D1D1D;
 
-  font-family: inter;
   font-size: 20px;
 
   width: 213px;
@@ -96,9 +110,7 @@ nav:not(.phonemenu) {
   align-items: center;
 
   background: #1D1D1D;
-  color: #ffffff;
 
-  font-family: inter;
   font-size: 20px;
 
   width: 213px;
@@ -119,7 +131,9 @@ nav:not(.phonemenu) {
   display: none;
 
   width: 100%;
+  z-index: 1000;
 }
+
 .phonemenu-container {
   display: flex;
   justify-content: center;
@@ -128,10 +142,11 @@ nav:not(.phonemenu) {
 
   backdrop-filter: blur(20px);
   padding-top: 5px;
-  padding-left: 10px;  
+  padding-left: 10px;
   padding-right: 10px;
   border-radius: 40px;
 }
+
 .phonemenu ul {
   list-style: none;
   display: flex;
@@ -147,6 +162,7 @@ nav:not(.phonemenu) {
   background-color: #1D1D1D;
   border-radius: 40px;
 }
+
 .phonemenu img:not(.logophone) {
   width: 30px;
   background-color: #1D1D1D;
@@ -160,8 +176,6 @@ nav:not(.phonemenu) {
 /* первый слайд */
 
 .familypak {
-  color: white;
-  font-family: inter;
   font-weight: bold;
   font-size: clamp(24px, 5vw, 48px);
   line-height: 0.6;
@@ -171,7 +185,7 @@ nav:not(.phonemenu) {
   padding: 20px 20px;
   width: fit-content;
 
-  margin-top: 250px;
+  margin-top: 350px;
 }
 
 .familypak p {
@@ -180,14 +194,12 @@ nav:not(.phonemenu) {
 
 .small1 {
   font-size: clamp(20px, 5vw, 36px);
-} /*for familypak*/
+}
+
+/*for familypak*/
 
 .coreansg {
   font-family: chinyen;
-}
-
-.green {
-  color: #AFFF50;
 }
 
 .backtext1 {
@@ -198,7 +210,6 @@ nav:not(.phonemenu) {
 }
 
 .backtext1 p {
-  color: #ffffff;
   text-align: center;
   font-size: clamp(10px, 2vw, 16px);
   font-family: pxel;
@@ -231,8 +242,6 @@ nav:not(.phonemenu) {
 }
 
 .tocatalog p {
-  color: #ffffff;
-  font-family: inter;
   text-align: center;
   font-size: clamp(12px, 2vw, 24px);
   line-height: 0.8;
@@ -243,51 +252,87 @@ nav:not(.phonemenu) {
   padding: 5px 25px;
 }
 
-/* 2 slide */
 
-.wenot p {
-  text-align: center;
-  color: white;
-  font-family: inter;
-  font-weight: bold;
-  font-size: clamp(20px, 5vw, 36px);
-  line-height: 0.6;
 
-  margin-top: 350px;
+
+
+/* cards block (info + contacts)*/
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 50px;
+
+  margin-top: 250px;
 }
 
-.small2 {
-  font-size: clamp(16px, 5vw, 24px);
-} /*for wenot*/
-
-.backtext2 p {
-  color: #ffffff;
-  text-align: center;
-  font-size: clamp(10px, 2vw, 16px);
-  font-family: pxel;
-
-  margin-top: 50px;
+.card-box {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 100%;
+  max-width: 320px;
 }
 
-.priceback {
+.card {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+
+  width: 100%;
+  height: 180px;
+  max-width: 320px;
+  border-radius: 40px;
+}
+
+.card-name {
+  font-size: clamp(20px, 2vw, 24px);
+}
+
+.card p {
+  flex: 1;
   display: flex;
   justify-content: center;
-} 
+  align-items: center;
 
-.priceback p {
-  color: #ffffff;
-  font-family: inter;
-  text-align: center;
-  font-size: clamp(16px, 2vw, 24px);
-  line-height: 0.8;
-
-  background-color: #1D1D1D;
-  border-radius: 100px;
-  width: fit-content;
-  padding: 5px 25px;
-
-  margin-top: 50px;
+  font-size: 16px;
+  font-family: sans-serif;
+  line-height: 1.5;
 }
+
+/* numbers cards */
+.one {
+  background-image: url(../img/cooking-background.png);
+}
+
+.two {
+  background-image: url(../img/delivery-background.png);
+}
+
+.three {
+  background-image: url(../img/price-background.png);
+}
+
+.four {
+  background-image: url(../img/contacts-background.png);
+}
+
+.four-end {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.five {
+  background-image: url(../img/call-background.png);
+}
+
+.six {
+  background-image: url(../img/map-background.png);
+}
+
+
 
 /* katalog prew */
 .prew {
@@ -303,7 +348,6 @@ nav:not(.phonemenu) {
   flex-direction: column;
   align-items: end;
   color: #1D1D1D;
-  font-family: inter;
   font-size: clamp(24px, 5vw, 48px);
   line-height: 0.9;
 
@@ -319,8 +363,6 @@ nav:not(.phonemenu) {
 }
 
 .catalogright p {
-  color: #ffffff;
-  font-family: inter;
   font-size: clamp(10px, 5vw, 32px);
   line-height: 0.7;
 
@@ -332,7 +374,9 @@ nav:not(.phonemenu) {
 .small3 {
   font-size: clamp(16px, 5vw, 24px);
   font-family: sans-serif;
-} /* for catalogright p */
+}
+
+/* for catalogright p */
 
 
 /* CATALOG */
@@ -365,8 +409,6 @@ nav:not(.phonemenu) {
 }
 
 .sl span:not(.sxl2line) {
-  font-family: inter;
-  color: #ffffff;
   font-size: clamp(16px, 2vw, 20px);
 
   background-color: #2C2C2C;
@@ -376,8 +418,6 @@ nav:not(.phonemenu) {
 
 /* sxl = name 2 line */
 .sxl {
-  font-family: inter;
-  color: #ffffff;
   font-size: clamp(16px, 2vw, 20px);
   line-height: 0.9;
   text-align: center;
@@ -396,212 +436,119 @@ nav:not(.phonemenu) {
 
 
 /* contact block */
+.contacts {
+  margin-top: 100px;
+}
 
-.contactprew {
+.h2-container-for-phone {
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: clamp(24px, 5vw, 48px);
+
   background-color: #1D1D1D;
   border-radius: 40px;
   padding: 20px 20px;
   width: fit-content;
-  line-height: 0.6;
 
   margin-top: 250px;
 }
 
-.contactprew p {
-  color: #ffffff;
-  font-family: inter;
-  font-size: clamp(32px, 5vw, 48px);
-  margin: 0;
-}
 
-.contactprew span {
-  color: #AFFF50;
-  font-size: clamp(24px, 5vw, 36px);
-}
-
-/* punkts */
-
-
-.stages {
+/* contacts buttons */
+.contact-button {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 100px;
-  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  font-size: clamp(20px, 2vw, 24px);
+  padding: 5px 55px;
+  height: 50px;
+  width: 100%;
+  max-width: 170px;
+  border-radius: 100px;
 }
 
-.stage {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
+.whatsapp {
+  background-color: #AFFF50;
+  color: #1D1D1D;
+}
 
+.call {
   background-color: #1D1D1D;
-  border-radius: 40px;
-  padding: 25px 25px;
-  width: 350px;
 }
 
-.stage span:not(.deliv, .ctfam) {
-  color: #ffffff;
-  font-family: inter;
-  font-size: clamp(16px, 2vw, 24px);
-  text-align: center;
+.openmap {
+  background-color: #D7D7D7;
+  color: #1D1D1D;
 }
 
-.stage p:not(.noborder) {
-  color: #ffffff;
-  font-family: sans-serif;
-  font-size: clamp(12px, 2vw, 16px);
-  text-align: center;
 
-  border: 1px solid #ffffff;
-  border-radius: 25px;
-  padding: 10px 10px;
-}
 
-.cvbtns {
-  display: flex;
+/* feedback block */
+.contact-buttons-phone {
+  display: none;
   justify-content: center;
-  gap: 15px;
-}
-
-.cv1 {
-  text-decoration: none;
-  color: #1D1D1D;
-  font-family: inter;
-  font-size: clamp(12px, 2vw, 16px);
-
-  background-color: #AFFF50;
-  border-radius: 40px;
-  padding: 15px 25px;
-}
-
-.cv2 {
-  text-decoration: none;
-  color: #1D1D1D;
-  font-family: inter;
-  font-size: clamp(12px, 2vw, 16px);
-
-  background-color: #D4D4D4;
-  border-radius: 40px;
-  padding: 15px 25px;
-}
-
-
-/* 2 stage */
-.deliv {
-  color: #FF3F3F;
-  font-size: clamp(8px, 1vw, 10px);
-}
-
-.gisbtnbox {
-  display: flex;
-  justify-content: center;
-}
-
-.gisbtn {
-  text-decoration: none;
-  color: #1D1D1D;
-  font-size: clamp(16px, 2vw, 24px);
-  font-family: inter;
-
-  background-color: #AFFF50;
-  border-radius: 40px;
-  padding: 11px 100px;
-
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-}
-
-/* stage 3 */
-.ctfam {
-  color: #AFFF50;
-  font-family: inter;
-  font-size: clamp(12px, 2vw, 16px);
-  text-align: center;
+  gap: 30px;
 
   margin-top: 50px;
+
+  -webkit-tap-highlight-color: transparent;
 }
 
-.noborder {
-  color: #ffffff;
-  font-family: sans-serif;
-  font-size: clamp(12px, 2vw, 16px);
-  text-align: center;
-  margin-top: 45px;
+.contact-buttons-phone img {
+  max-width: 50px;
 }
+
+.contact-buttons-phone a {
+  backdrop-filter: blur(10px);
+
+  padding: 5px 25px;
+  border: 1px outset #ffffff67;
+  border-radius: 40px;
+}
+
+
+
+#feedback {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+
+  margin-top: 200px;
+}
+
+.feedback-content iframe {
+  border-radius: 40px;
+}
+
+.feedback-map iframe {
+  border-radius: 40px;
+  filter: invert(100%) hue-rotate(290deg);
+}
+
+
 
 /* footer */
-
 footer {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 100px;
+
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 
-  display: flex;
-  gap: 150px;
-  justify-content: center;
-
+  background-color: #1D1D1D;
   width: 100vw;
-  background-color: #1D1D1D;
-
-  margin-top: 250px;
 }
 
-.worktime {
-  color: #ffffff;
-  font-size: clamp(20px, 5vw, 24px);
-  font-family: sans-serif;
+footer p {
   text-align: center;
-}
-
-.contactsfooter {
-  color: #ffffff;
-  font-size: clamp(24px, 5vw, 36px);
-  font-family: sans-serif;
-  text-align: center;
-  line-height: 0.6;
-}
-
-.contactsfooter span {
-  font-size: clamp(20px, 5vw, 24px);
-}
-
-.psecure {
-  color: #ffffff;
-  font-size: clamp(20px, 5vw, 24px);
-  font-family: sans-serif;
-  text-align: center;
-  line-height: 0.9;
-}
-
-.psecureph {
-  display: none;
-  justify-content: center;
-  color: #ffffff;
-  font-size: clamp(16px, 2vw, 24px);
-  font-family: sans-serif;
-  text-align: center;
-  line-height: 0.9;
-  background-color: #1D1D1D;
-  margin-top: 100px;
-}
-
-.stageleft {
-  display: none;
-
-  background-color: #1D1D1D;
-  padding: 25px 25px;
-  border-radius: 40px;
-  width: fit-content;
-}
-
-.contprew {
-  margin-top: 100px;
-  color: #ffffff;
-  font-family: inter;
-  font-size: clamp(32px, 5vw, 48px);
-  line-height: 0.6;
-  text-align: start;
+  font-size: clamp(16px, 3vw, 20px);
 }

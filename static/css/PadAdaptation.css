@@ -1,11 +1,30 @@
-@media (max-width: 967px) {
+@media (max-width: 1024px) {
     nav:not(.phonemenu) {
         display: none;
     }
+
     .phonemenu {
         display: flex;
     }
+
+    .feedback-map {
+        display: none;
+    }
+
+    /* buttons hover-off */
+    .whatsapp:hover {
+        background-color: #AFFF50;
+    }
+
+    .call:hover {
+        background-color: #1D1D1D;
+    }
+
+    .openmap:hover {
+        background-color: #D7D7D7;
+    }
 }
+
 
 @media (max-width: 1279px) {
     .catalogright p {
@@ -20,38 +39,7 @@
         background: none;
     }
 
-    .stages {
-        justify-content: center;
-    }
-
-    .stageleft {
-        display: flex;
-        flex-direction: column;
-    }
-
-    footer {
-        display: none;
-    }
-
-    .psecureph {
-        display: flex;
-    }
-
     /* hover */
-    .cv2:hover {
-        background-color: #D4D4D4;
-        animation: none;
-    }
-
-    .cv1:hover {
-        background-color: #AFFF50;
-        animation: none;
-    }
-
-    .gisbtn::before {
-        display: none;
-    }
-
     .tocatalog a:hover {
         background-color: #AFFF50;
     }
