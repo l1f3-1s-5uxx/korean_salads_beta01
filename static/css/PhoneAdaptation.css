@@ -5,14 +5,6 @@
         display: none;
     }
 
-    nav:not(.phonemenu) {
-        display: none;
-    }
-
-    .phonemenu {
-        display: flex;
-    }
-
     /* textmain */
     .familypak {
         margin-top: 250px;
